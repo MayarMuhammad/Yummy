@@ -1,60 +1,79 @@
 export function showContacts() {
-  let contacts = `<form>
+  let contacts = ` <div class="checkForm">
   <div class="vh-100 d-flex justify-content-center align-content-center flex-wrap">
-  <div class="col-6">
-      <div class="input m-2"><input type="text" class="form-control" id="name" placeholder="Enter Your Name">
-          <label for="name" class="w-100 text-center alert alert-danger nameAlert mt-2 p-2">Name must be 2 characters and more!
-              <ul class="list-unstyled m-0"><li>Special Characters or Numbers are not allowed!</li></ul></label>
+      <div class="row">
+          <div class="col-md-6">
+              <div class="input m-2"><input type="text" class="form-control" id="name"
+                      placeholder="Enter Your Name">
+                  <label for="name" class="w-100 text-center alert alert-danger nameAlert mt-2 p-2">Name must be 2
+                      characters and more!
+                      <ul class="list-unstyled m-0">
+                          <li>Special Characters or Numbers are not allowed!</li>
+                      </ul>
+                  </label>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="input m-2"><input type="email" class="form-control" id="email"
+                      placeholder="Enter your Email">
+                  <label for="email" class="emailAlert w-100 text-center alert alert-danger mt-2 p-2">Enter a
+                      valid
+                      Email
+                      <ul class="list-unstyled m-0">
+                          <li>example@example.domain</li>
+                      </ul>
+                  </label>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="input m-2"><input type="" class="form-control mobile" placeholder="Enter your Phone"
+                      id="mobile">
+                  <label for="mobile" class="mobileAlert w-100 text-center alert alert-danger mt-2 p-2">Enter
+                      Valid Phone Number</label>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="input m-2"><input type="number" class="form-control" id="age"
+                      placeholder="Enter your Age">
+                  <label for="age" class="ageAlert w-100 text-center alert alert-danger mt-2 p-2">Enter age from 1
+                      to
+                      200</label>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="input-group m-2">
+                  <input type="password" class="form-control" placeholder="Enter your Password" id="password">
+                  <span class="input-group-text justify-content-center p-2 me-3" id="addon-wrapping"><i
+                          class="fa-solid fa-eye-slash showHidePassword"></i></span>
+              </div>
+              <label for="password" class="passwordAlert alert alert-danger mt-2 p-2 mx-2">
+                  <h6>Password must contain the following:</h6>
+                  <ul class="list-unstyled">
+                      <li id="letter" class="invalid">At least <b>one lowercase</b> letter</li>
+                      <li id="capital" class="invalid">At least <b>one capital (uppercase)</b> letter</li>
+                      <li id="number" class="invalid">At least <b>one number</b></li>
+                      <li id="length" class="invalid">At least <b>8 characters</b></li>
+                      <li id="specialCharacters" class="invalid">At least <b>one special character</b></li>
+                  </ul>
+              </label>
+          </div>
+          <div class="col-md-6">
+              <div class="input-group m-2">
+                  <input type="password" class="form-control" placeholder="Re-Enter your Password"
+                      id="confirmPassword">
+                  <span class="input-group-text justify-content-center p-2 me-3" id="addon-wrapping"><i
+                          class="fa-solid fa-eye-slash showPassword"></i></span>
+              </div>
+              <label for="confirmPassword"
+                  class="confirmPasswordAlert text-center alert alert-danger mt-2 p-2 mx-2">Password doesn't
+                  match</label>
+          </div>
+          <div class="col-12 text-center">
+              <button type="button" class="btn btn-outline-danger m-2 submitBtn" disabled>Submit</button>
+          </div>
       </div>
   </div>
-  <div class="col-6">
-      <div class="input m-2"><input type="email" class="form-control" id="email" placeholder="Enter your Email">
-          <label for="email" class="emailAlert w-100 text-center alert alert-danger mt-2 p-2">Enter a valid
-              Email
-              <ul class="list-unstyled m-0"><li>example@example.domain</li></ul></label>
-      </div>
-  </div>
-  <div class="col-6">
-      <div class="input m-2"><input type="" class="form-control mobile" placeholder="Enter your Phone"
-              id="mobile">
-          <label for="mobile" class="mobileAlert w-100 text-center alert alert-danger mt-2 p-2">Enter Valid Phone Number</label>
-      </div>
-  </div>
-  <div class="col-6">
-      <div class="input m-2"><input type="number" class="form-control" id="age" placeholder="Enter your Age">
-          <label for="age" class="ageAlert w-100 text-center alert alert-danger mt-2 p-2">Enter age from 1 to
-              200</label>
-      </div>
-  </div>
-  <div class="col-6">
-      <div class="input-group m-2">
-          <input type="password" class="form-control" placeholder="Enter your Password" id="password">
-          <span class="input-group-text justify-content-center p-2 me-3" id="addon-wrapping"><i
-                  class="fa-solid fa-eye-slash showHidePassword"></i></span>
-      </div>
-      <label for="password" class="passwordAlert alert alert-danger mt-2 p-2 mx-2">
-          <h6>Password must contain the following:</h6>
-          <ul class="list-unstyled">
-              <li id="letter" class="invalid">At least <b>one lowercase</b> letter</li>
-              <li id="capital" class="invalid">At least <b>one capital (uppercase)</b> letter</li>
-              <li id="number" class="invalid">At least <b>one number</b></li>
-              <li id="length" class="invalid">At least <b>8 characters</b></li>
-              <li id="specialCharacters" class="invalid">At least <b>one special character</b></li>
-          </ul>
-      </label>
-  </div>
-  <div class="col-6">
-      <div class="input-group m-2">
-          <input type="password" class="form-control" placeholder="Re-Enter your Password" id="rePassword">
-          <span class="input-group-text justify-content-center p-2 me-3" id="addon-wrapping"><i
-                  class="fa-solid fa-eye-slash showPassword"></i></span>
-      </div>
-      <label for="rePassword" class="repasswordAlert text-center alert alert-danger mt-2 p-2 mx-2">Password doesn't match</label>
-  </div>
-  <div class="col-12 text-center">
-      <button type="button" class="btn btn-outline-danger m-2 submitBtn" disabled>Submit</button>
-  </div>
-</div>  </form>`;
+</div>`;
 
   $(".content .food .row").html(contacts);
   validations();
@@ -65,7 +84,7 @@ function validations() {
   let phone = false;
   let age = false;
   let password = false;
-  let repassword = false;
+  let confirmPassword = false;
 
   $("#name").keyup(function (e) {
     name = nameValidation();
@@ -87,14 +106,14 @@ function validations() {
     password = passwordValidation();
     // console.log(password);
   });
-  $("#rePassword").keyup(function (e) {
-    repassword = rePasswordValidation();
-    // console.log(repassword);
+  $("#confirmPassword").keyup(function (e) {
+    confirmPassword = checkPasswordMatch();
+    // console.log(confirmPassword);
   });
 
-  $("form").keyup(function () {
-    // console.log(name, email, phone, age, password, repassword);
-    if (name && email && phone && age && password && repassword) {
+  $(".checkForm").keyup(function () {
+    // console.log(name, email, phone, age, password, confirmPassword);
+    if (name && email && phone && age && password && confirmPassword) {
       // console.log("valid");
       $(".submitBtn").prop("disabled", false);
       $(".submitBtn").removeClass("btn-outline-danger");
@@ -121,12 +140,12 @@ function showHide() {
   });
 
   $(".showPassword").click(function () {
-    if ($("input#rePassword").attr("type") === "password") {
-      $("input#rePassword").attr("type", "text");
+    if ($("input#confirmPassword").attr("type") === "password") {
+      $("input#confirmPassword").attr("type", "text");
       $(".showPassword").removeClass("fa-eye-slash");
       $(".showPassword").addClass("fa-eye");
     } else {
-      $("input#rePassword").attr("type", "password");
+      $("input#confirmPassword").attr("type", "password");
       $(".showPassword").removeClass("fa-eye");
       $(".showPassword").addClass("fa-eye-slash");
     }
@@ -249,15 +268,15 @@ function passwordValidation() {
   return valid;
 }
 
-function rePasswordValidation() {
+function checkPasswordMatch() {
   let valid = false;
-  // console.log($("#rePassword").val());
-  // console.log($("input#password").val());
-  if ($("#rePassword").val() === $("input#password").val()) {
-    $(".repasswordAlert").css("display", "none");
-    valid = true;
+  let password = $("input#password").val();
+  let confirmPassword = $("input#confirmPassword").val();
+  if (password != confirmPassword) {
+    $(".confirmPasswordAlert").css("display", "block");
   } else {
-    $(".repasswordAlert").css("display", "block");
+    $(".confirmPasswordAlert").css("display", "none");
+    valid = true;
   }
   return valid;
 }

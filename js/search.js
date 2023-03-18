@@ -1,12 +1,18 @@
 import { displayMealDetails } from "./details.js";
 
 export function searchInputs() {
-  let inputs = `<div class="d-flex my-5 container">
-      <input type="text" class="form-control w-50 mx-3 bg-transparent text-white searchByName"
-          placeholder="Search by Name">
-      <input type="text" class="form-control w-50 mx-3 bg-transparent text-white searchByFirstLetter"
-          maxlength="1" placeholder="Search by First Letter">
-  </div>`;
+  let inputs = `<div class="container">
+  <div class="row my-5">
+      <div class="col-sm-6">
+          <input type="text" class="form-control w-100 mx-3 bg-transparent text-white searchByName mb-3"
+              placeholder="Search by Name">
+      </div>
+      <div class="col-sm-6">
+          <input type="text" class="form-control w-100 mx-3 bg-transparent text-white searchByFirstLetter"
+              maxlength="1" placeholder="Search by First Letter">
+      </div>
+  </div>
+</div>>`;
   $(".searchInputs").html(inputs);
   $(".searchInputs").css("display", "block");
   $(".results").css("display", "none");

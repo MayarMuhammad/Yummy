@@ -1,5 +1,5 @@
-import { searchPrev } from './app.js';
-import { searchInputs } from './search.js';
+import { searchPrev } from "./app.js";
+import { searchInputs } from "./search.js";
 
 async function getMealDetails(mealID) {
   const URL = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`;
@@ -55,16 +55,17 @@ function closeBtn() {
   $(".btn-close")
     .unbind()
     .click(function (e) {
-      if(searchPrev){
+      if (searchPrev) {
+        $(".innerLoadingScreen").fadeIn(100);
         searchInputs();
         $(".food").removeClass("d-none");
         $(".foodDetails").addClass("d-none");
-      }
-      else{
-              $(".innerLoadingScreen").fadeIn(100);
-      $(".food").removeClass("d-none");
-      $(".foodDetails").addClass("d-none");
-      $(".innerLoadingScreen").fadeOut(200);
+        $(".innerLoadingScreen").fadeOut(200);
+      } else {
+        $(".innerLoadingScreen").fadeIn(100);
+        $(".food").removeClass("d-none");
+        $(".foodDetails").addClass("d-none");
+        $(".innerLoadingScreen").fadeOut(200);
       }
     });
 }

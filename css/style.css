@@ -1,0 +1,121 @@
+body {
+  background-color: #0d0d0d;
+  color: #f9f6f6;
+  overflow: hidden;
+}
+nav .logo img {
+  width: 55px;
+}
+nav .openClose img {
+  width: 30px;
+}
+.tabs ul li a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+.navBarContent {
+  background-color: #0d0d0d;
+  width: 255px;
+  display: none;
+}
+.tabs,
+.footer {
+  width: 255px;
+}
+.closeIcon {
+  display: none;
+}
+i:hover {
+  cursor: pointer;
+}
+.openClose:hover {
+  cursor: pointer;
+}
+.tabs ul li {
+  position: relative;
+  top: 200px;
+}
+.searchInputs input::placeholder {
+  color: white !important;
+  opacity: 0.5 !important;
+}
+.searchInputs {
+  display: none;
+}
+.mealOverlay {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.mealImage:hover .mealOverlay {
+  top: 0;
+}
+.mealImage:hover {
+  cursor: pointer;
+}
+.mealOverlay h3,
+.mealOverlay p {
+  display: none;
+}
+.mealImage:hover h3 {
+  display: block;
+}
+.mealImage:hover p {
+  display: block;
+}
+.foodDetails label {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 38.4px;
+}
+.foodDetails span {
+  font-size: 28px;
+  line-height: 33.6px;
+  font-weight: 500;
+}
+span.customeSpan {
+  font-size: unset;
+  line-height: unset;
+  font-weight: unset;
+}
+.areaDisplay:hover {
+  cursor: pointer;
+}
+.nameAlert,
+.emailAlert,
+.ageAlert,
+.mobileAlert,
+.passwordAlert,
+.repasswordAlert {
+  display: none;
+}
+.valid {
+  color: green;
+}
+.valid:before {
+  content: "✔";
+  padding-right: 10px;
+}
+.invalid {
+  color: red;
+}
+.invalid:before {
+  content: "✖";
+  padding-right: 10px;
+}
+.hidePass {
+  display: none;
+}
+.input-group-text {
+  width: 40px;
+}
+.innerLoadingScreen {
+  display: none;
+}

@@ -19,7 +19,7 @@ async function getIngredient(ingredient) {
 }
 
 export function getIngredientsData() {
-  $(".innerLoadingScreen").fadeIn(100);
+  $(".innerLoadingScreen").fadeIn(300);
   getIngredients().then((data) => {
     // console.log(data);
     let cartona = "";
@@ -47,15 +47,15 @@ export function getIngredientsData() {
     });
     $(".content .food .row").html(cartona);
     displayIngredient();
-    $(".innerLoadingScreen").fadeOut(200);
+    $(".innerLoadingScreen").fadeOut(300);
   });
 }
 
 function getIngredientData(area) {
-  $(".innerLoadingScreen").fadeIn(100);
+  $(".innerLoadingScreen").fadeIn(300);
   getIngredient(area).then((data) => {
     display(data.meals.slice(0, 20));
-    $(".innerLoadingScreen").fadeOut(200);
+    $(".innerLoadingScreen").fadeOut(300);
   });
 }
 

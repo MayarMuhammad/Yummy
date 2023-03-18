@@ -19,7 +19,7 @@ async function getArea(area) {
 }
 
 export function getAreasData() {
-  $(".innerLoadingScreen").fadeIn(100);
+  $(".innerLoadingScreen").fadeIn(300);
   getAreas().then((data) => {
     // console.log(data);
     let cartona = "";
@@ -35,15 +35,15 @@ export function getAreasData() {
     });
     $(".content .food .row").html(cartona);
     displayArea();
-    $(".innerLoadingScreen").fadeOut(200);
+    $(".innerLoadingScreen").fadeOut(300);
   });
 }
 
 function getAreaData(area) {
-  $(".innerLoadingScreen").fadeIn(100);
+  $(".innerLoadingScreen").fadeIn(300);
   getArea(area).then((data) => {
     display(data.meals.slice(0,20));
-    $(".innerLoadingScreen").fadeOut(200);
+    $(".innerLoadingScreen").fadeOut(300);
   });
 }
 

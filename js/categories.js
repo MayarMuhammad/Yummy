@@ -19,7 +19,7 @@ async function getCategory(category) {
 }
 
 export function getCategoriesData() {
-  $(".innerLoadingScreen").fadeIn(100);
+  $(".innerLoadingScreen").fadeIn(300);
   getCategories().then((data) => {
     // console.log(data);
     let cartona = "";
@@ -43,15 +43,15 @@ export function getCategoriesData() {
     });
     $(".content .food .row").html(cartona);
     displayCategory();
-    $(".innerLoadingScreen").fadeOut(200);
+    $(".innerLoadingScreen").fadeOut(300);
   });
 }
 
 function getCategoryData(category) {
-  $(".innerLoadingScreen").fadeIn(100);
+  $(".innerLoadingScreen").fadeIn(300);
   getCategory(category).then((data) => {
     display(data.meals.slice(0, 20));
-    $(".innerLoadingScreen").fadeOut(200);
+    $(".innerLoadingScreen").fadeOut(300);
   });
 }
 

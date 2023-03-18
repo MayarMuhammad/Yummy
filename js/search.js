@@ -66,9 +66,9 @@ export function display(data) {
 export function searchByName(foodName) {
   getFoodData(foodName).then((data) => {
     if (data.meals != null) {
-      $(".innerLoadingScreen").fadeIn(100);
+      $(".innerLoadingScreen").fadeIn(300);
       display(data.meals.slice(0, 20));
-      $(".innerLoadingScreen").fadeOut(200);
+      $(".innerLoadingScreen").fadeOut(300);
     } else {
       display([]);
     }
@@ -81,9 +81,9 @@ export function searchByFirstLetter(firstLetter) {
   } else {
     getFoodDataByFirstLetter(firstLetter).then((data) => {
       if (data.meals != null) {
-        $(".innerLoadingScreen").fadeIn(100);
+        $(".innerLoadingScreen").fadeIn(300);
         display(data.meals.slice(0, 20));
-        $(".innerLoadingScreen").fadeOut(200);
+        $(".innerLoadingScreen").fadeOut(300);
       } else {
         display([]);
       }
@@ -98,8 +98,8 @@ function getDetails() {
     $(this).click(() => {
       // console.log($(".food").html());
       mealsPrev = $(".food").html();
-      $(".foodDetails").removeClass("d-none");
-      $(".food").addClass("d-none");
+      $(".foodDetails").show(300);
+      $(".food").hide(300);
       $(".searchInputs").css("display", "none");
       displayMealDetails(this.id);
     });

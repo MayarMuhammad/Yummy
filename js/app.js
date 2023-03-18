@@ -53,36 +53,31 @@ $(document).ready(function () {
     $.each($(".tabs ul li a"), function () {
       $(this).on("click", function () {
         openCloseNav();
-        $(".food").removeClass("d-none");
-        $(".foodDetails").addClass("d-none");
+        backToTop();
+        $(".food").show(300);
+        $(".foodDetails").hide(300);
         if ($(this).not("#Search")) {
           $(".searchInputs").css("display", "none");
           $(".results").css("display", "block");
         }
         if (this.id == "Search") {
           searchInputs();
-          backToTop();
           searchPrev = true;
           // console.log(searchPrev);
         } else if (this.id == "Categories") {
           getCategoriesData();
-          backToTop();
           searchPrev = false;
         } else if (this.id == "Area") {
           getAreasData();
-          backToTop();
           searchPrev = false;
         } else if (this.id == "Ingredients") {
           getIngredientsData();
-          backToTop();
           searchPrev = false;
         } else if (this.id == "Contact") {
           showContacts();
-          backToTop();
           searchPrev = false;
         } else {
           searchByName("");
-          backToTop();
           searchPrev = false;
         }
       });

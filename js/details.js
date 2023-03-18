@@ -11,7 +11,7 @@ async function getMealDetails(mealID) {
 }
 
 export function displayMealDetails(mealID) {
-  $(".innerLoadingScreen").fadeIn(100);
+  $(".innerLoadingScreen").fadeIn(300);
   getMealDetails(mealID).then((data) => {
     let meal = data.meals[0];
     let ingredients = "";
@@ -46,7 +46,7 @@ export function displayMealDetails(mealID) {
             <a type="button" class="btn btn-danger text-white" target="_blank" href="${meal.strYoutube}">Youtube</a>
         </div>`;
     $(".foodDetails .details .row").html(mealDetails);
-    $(".innerLoadingScreen").fadeOut(200);
+    $(".innerLoadingScreen").fadeOut(300);
     closeBtn();
   });
 }
@@ -56,16 +56,16 @@ function closeBtn() {
     .unbind()
     .click(function (e) {
       if (searchPrev) {
-        $(".innerLoadingScreen").fadeIn(100);
+        $(".innerLoadingScreen").fadeIn(300);
         searchInputs();
-        $(".food").removeClass("d-none");
-        $(".foodDetails").addClass("d-none");
-        $(".innerLoadingScreen").fadeOut(200);
+        $(".food").show(300);
+        $(".foodDetails").hide(300);
+        $(".innerLoadingScreen").fadeOut(300);
       } else {
-        $(".innerLoadingScreen").fadeIn(100);
-        $(".food").removeClass("d-none");
-        $(".foodDetails").addClass("d-none");
-        $(".innerLoadingScreen").fadeOut(200);
+        $(".innerLoadingScreen").fadeIn(300);
+        $(".food").show(300);
+        $(".foodDetails").hide(300);
+        $(".innerLoadingScreen").fadeOut(300);
       }
     });
 }

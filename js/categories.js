@@ -25,12 +25,11 @@ export function getCategoriesData() {
     let cartona = "";
     $.each(data.categories, function (indexInArray, valueOfElement) {
       cartona += `<div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-      <div class="mealImage position-relative overflow-hidden my-4">
+      <div class="mealImage position-relative overflow-hidden my-4" id="${valueOfElement.strCategory}">
           <img src="${
             valueOfElement.strCategoryThumb
           }" alt="meal image" class="w-100 rounded-2">
-          <div class="mealOverlay position-absolute bg-white bg-opacity-75 rounded-2 d-flex align-content-center flex-wrap text-black text-center p-2"
-              id="${valueOfElement.strCategory}">
+          <div class="mealOverlay position-absolute bg-white bg-opacity-75 rounded-2 d-flex align-content-center flex-wrap text-black text-center p-2">
               <h3 class="w-100">${valueOfElement.strCategory}</h3>
               <p>${valueOfElement.strCategoryDescription
                 .split(" ")

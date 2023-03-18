@@ -80,10 +80,12 @@ export function searchByFirstLetter(firstLetter) {
     searchByName("");
   } else {
     getFoodDataByFirstLetter(firstLetter).then((data) => {
-      if (data) {
+      if (data.meals != null) {
         $(".innerLoadingScreen").fadeIn(100);
         display(data.meals.slice(0, 20));
         $(".innerLoadingScreen").fadeOut(200);
+      } else {
+        display([]);
       }
     });
   }

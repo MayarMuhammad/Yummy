@@ -25,7 +25,9 @@ export function getCategoriesData() {
     let cartona = "";
     $.each(data.categories, function (indexInArray, valueOfElement) {
       cartona += `<div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-      <div class="mealImage position-relative overflow-hidden my-4" id="${valueOfElement.strCategory}">
+      <div class="mealImage position-relative overflow-hidden my-4" id="${
+        valueOfElement.strCategory
+      }">
           <img src="${
             valueOfElement.strCategoryThumb
           }" alt="meal image" class="w-100 rounded-2">
@@ -54,7 +56,7 @@ function getCategoryData(category) {
 }
 
 function displayCategory() {
-  $.each($(".content .food .mealOverlay"), function () {
+  $.each($(".content .food .mealImage"), function () {
     $(this).click(() => {
       getCategoryData(this.id);
     });

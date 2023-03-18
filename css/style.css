@@ -116,9 +116,6 @@ span.customeSpan {
 .input-group-text {
   width: 40px;
 }
-.innerLoadingScreen {
-  display: none;
-}
 @media only screen and (max-width: 600px) {
   .searchInputs .row,
   .content .food .row {
@@ -126,8 +123,8 @@ span.customeSpan {
     margin: auto;
   }
 }
-@media only screen and (min-width: 992px){
-  .checkForm .row{
+@media only screen and (min-width: 992px) {
+  .checkForm .row {
     width: 70%;
     margin: auto;
   }

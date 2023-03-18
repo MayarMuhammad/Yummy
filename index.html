@@ -34,12 +34,12 @@
             <div class="d-flex flex-column justify-content-between p-4 h-100">
                 <div class="tabs overflow-hidden">
                     <ul class="list-unstyled">
-                        <li class="mb-3"><a id="Home">Home</a></li>
-                        <li class="mb-3"><a id="Search">Search</a></li>
-                        <li class="mb-3"><a id="Categories">Categories</a></li>
-                        <li class="mb-3"><a id="Area">Area</a></li>
-                        <li class="mb-3"><a id="Ingredients">Ingredients</a></li>
-                        <li class="mb-3"><a id="Contact">Contact Us</a></li>
+                        <li class="mb-3"><a id="Home" class="backToTop">Home</a></li>
+                        <li class="mb-3"><a id="Search" class="backToTop">Search</a></li>
+                        <li class="mb-3"><a id="Categories" class="backToTop">Categories</a></li>
+                        <li class="mb-3"><a id="Area" class="backToTop">Area</a></li>
+                        <li class="mb-3"><a id="Ingredients" class="backToTop">Ingredients</a></li>
+                        <li class="mb-3"><a id="Contact" class="backToTop">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer">
@@ -56,9 +56,9 @@
         </div>
     </nav>
     <section class="searchInputs"></section>
-    <section class="content d-block position-relative">
-        <div class="innerLoadingScreen position-absolute top-0 bottom-0 start-0 end-0 bg-black z-1 vh-100">
-            <div class=" d-flex justify-content-center align-content-center flex-wrap vh-100">
+    <section class="content d-block">
+        <div class="innerLoadingScreen position-fixed top-0 bottom-0 start-0 end-0 bg-black z-1">
+            <div class="vh-100 d-flex justify-content-center align-content-center flex-wrap">
                 <i class="fa-solid fa-spinner fa-5x fa-spin"></i>
             </div>
         </div>

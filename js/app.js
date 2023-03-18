@@ -44,6 +44,12 @@ $(document).ready(function () {
       }
     }
 
+    function backToTop() {
+      $(".backToTop").on("click", function () {
+        $(document).scrollTop(0);
+      });
+    }
+
     $.each($(".tabs ul li a"), function () {
       $(this).on("click", function () {
         openCloseNav();
@@ -55,22 +61,28 @@ $(document).ready(function () {
         }
         if (this.id == "Search") {
           searchInputs();
+          backToTop();
           searchPrev = true;
           // console.log(searchPrev);
         } else if (this.id == "Categories") {
           getCategoriesData();
+          backToTop();
           searchPrev = false;
         } else if (this.id == "Area") {
           getAreasData();
+          backToTop();
           searchPrev = false;
         } else if (this.id == "Ingredients") {
           getIngredientsData();
+          backToTop();
           searchPrev = false;
         } else if (this.id == "Contact") {
           showContacts();
+          backToTop();
           searchPrev = false;
         } else {
           searchByName("");
+          backToTop();
           searchPrev = false;
         }
       });
